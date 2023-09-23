@@ -44,7 +44,6 @@ nav.navigation a.active {
 
 h1 {
   font-size: 65px;
-  margin: 0%;
 }
 
 h2 {
@@ -63,18 +62,22 @@ h4 {
 
 p {
   font-size: 18px;
-  margin-bottom: 50px;
+}
+
+li {
+  font-size: 18px;
 }
 
 .project-info p {
   margin: 0;
 }
 
-img.index-image {
+img.index-image,
+img.about-headshot-image {
   border: solid 3px var(--primary-colour);
   border-radius: 8px;
-  box-shadow: 10px 10px var(--primary-colour);
-  max-width: 450px;
+  box-shadow: 10px 10px var(--tertiary-colour);
+  max-width: 350px;
   padding: 15px;
   transition: all 200ms ease-in-out;
 }
@@ -107,12 +110,16 @@ a.email-link {
     rgb(255, 180, 239) 67.7%
   );
   margin: 0 auto;
-  padding: 65px 0px 65px;
+  padding: 35px 0px 65px;
 }
 
 .page-hero-content {
   margin: 0 auto;
   max-width: 65%;
+}
+
+.hero-links {
+  margin-top: 55px;
 }
 
 a.hero-button {
@@ -133,16 +140,23 @@ a.hero-button:hover {
 
 .main-content {
   margin: 0 auto;
+  margin-top: 50px;
   max-width: 65%;
 }
 
-.project-overview {
+.project-overview,
+.about-overview {
   display: flex;
   justify-content: space-between;
 }
 
-.project-info {
+.project-info,
+.about-info {
   margin: 0;
   margin-left: 40px;
   text-align: left;
+}
+
+.about-info h3 {
+  margin: 0%;
 }
