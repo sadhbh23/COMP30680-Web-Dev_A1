@@ -59,6 +59,19 @@ h2 {
   font-size: 35px;
 }
 
+p {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+
+a.email-link {
+  color: var(--primary-colour);
+  display: block;
+  font-weight: 700;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
 .page-hero {
   background: linear-gradient(
     114.2deg,
@@ -66,5 +79,15 @@ h2 {
     rgb(255, 180, 239) 67.7%
   );
   margin: 0 auto;
-  padding: 65px 0px 85px;
+  padding: 65px 0px 65px;
+}
+
+.page-hero-content {
+  margin: 0 auto;
+  max-width: 65%;
+}
+
+.main-content {
+  margin: 0 auto;
+  max-width: 65%;
 }
