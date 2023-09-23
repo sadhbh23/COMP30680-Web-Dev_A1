@@ -39,7 +39,8 @@ nav.navigation a {
 }
 
 nav.navigation a:hover {
-  background-color: #54575c;
+  color: var(--primary-colour);
+  background-color: var(--secondary-colour);
 }
 
 nav.navigation a.active {
@@ -61,7 +62,7 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 p,
@@ -157,6 +158,10 @@ thead {
 th,
 td {
   padding: 15px 50px;
+}
+
+td a {
+  color: var(--tertiary-colour);
 }
 
 tr:nth-child(even) {
