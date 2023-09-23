@@ -3,14 +3,6 @@
   --secondary-colour: #e6edf3;
   --tertiary-colour: #ffb4ef;
   --quarternary-color: #79c2f3;
-  --gradient-colour: radial-gradient(
-    328px at 2.9% 15%,
-    rgb(191, 224, 251) 0%,
-    rgb(232, 233, 251) 25.8%,
-    rgb(252, 239, 250) 50.8%,
-    rgb(234, 251, 251) 77.6%,
-    rgb(240, 251, 244) 100.7%
-  );
 }
 
 body {
@@ -56,12 +48,47 @@ h1 {
 }
 
 h2 {
+  font-family: monospace;
+  font-weight: 300;
   font-size: 35px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 p {
   font-size: 18px;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
+}
+
+.project-info p {
+  margin: 0;
+}
+
+img.index-image {
+  border: solid 3px var(--primary-colour);
+  border-radius: 8px;
+  box-shadow: 10px 10px var(--primary-colour);
+  max-width: 450px;
+  padding: 15px;
+  transition: all 200ms ease-in-out;
+}
+
+img.index-image:hover {
+  transform: scale(103%);
+}
+
+small {
+  color: var(--primary-colour);
+}
+
+footer {
+  margin: 50px;
 }
 
 a.email-link {
@@ -73,6 +100,7 @@ a.email-link {
 }
 
 .page-hero {
+  /*This color gradient was created using the open-source code snippet provided by SheCodes at https://gradients.shecodes.io/gradients/76 */
   background: linear-gradient(
     114.2deg,
     rgb(121, 194, 243) 22.6%,
@@ -87,7 +115,34 @@ a.email-link {
   max-width: 65%;
 }
 
+a.hero-button {
+  color: var(--secondary-colour);
+  background-color: var(--primary-colour);
+  box-shadow: 4px 4px;
+  border-radius: 8px;
+  padding: 15px 18px;
+  margin: 0px 15px;
+  text-decoration: none;
+  transition: 200ms all ease-in-out;
+}
+
+a.hero-button:hover {
+  color: var(--primary-colour);
+  background-color: var(--secondary-colour);
+}
+
 .main-content {
   margin: 0 auto;
   max-width: 65%;
+}
+
+.project-overview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-info {
+  margin: 0;
+  margin-left: 40px;
+  text-align: left;
 }
