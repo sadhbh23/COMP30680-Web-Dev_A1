@@ -1,14 +1,16 @@
 :root {
   --primary-colour: #21262e;
-  --secondary-colour: #e6edf3;
-  --tertiary-colour: #ffb4ef;
-  --quarternary-colour: #79c2f3;
+  --secondary-colour: #f7f8f8;
+  --tertiary-colour: #6dc0ec;
+  --quarternary-colour: #bff1ec;
   --quinary-colour: #e9ebed;
 }
 
 body {
-  background-color: var(--secondary-color);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--secondary-colour);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: 100;
   margin: 0%;
   text-align: center;
 }
@@ -28,6 +30,7 @@ nav.navigation li {
 nav.navigation a {
   color: #e6edf3;
   float: left;
+  font-weight: 500;
   font-size: 18px;
   padding: 15px 25px;
   text-align: center;
@@ -50,45 +53,47 @@ h1 {
 h2 {
   font-family: monospace;
   font-weight: 300;
-  font-size: 35px;
 }
 
+h2,
 h3 {
-  font-size: 40px;
+  font-size: 35px;
 }
 
 h4 {
   font-size: 20px;
 }
 
-p {
-  font-size: 18px;
-}
-
+p,
 li {
   font-size: 18px;
 }
 
-.project-info p {
-  margin: 0;
+img.index-image,
+img.about-headshot-image,
+img.gallery-image,
+iframe.embedded-shecodes-video {
+  border: solid 1px var(--secondary-colour);
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 15px;
 }
 
 img.index-image,
 img.about-headshot-image {
-  border: solid 3px var(--primary-colour);
-  border-radius: 8px;
-  box-shadow: 10px 10px var(--tertiary-colour);
-  max-width: 350px;
-  padding: 15px;
   transition: all 200ms ease-in-out;
+}
+
+img.index-image {
+  max-width: 350px;
 }
 
 img.index-image:hover {
   transform: scale(103%);
 }
 
-small {
-  color: var(--primary-colour);
+img.about-headshot-image {
+  max-width: 40%;
 }
 
 footer {
@@ -104,12 +109,8 @@ a.email-link {
 }
 
 .page-hero {
-  /*This color gradient was created using the open-source code snippet provided by SheCodes at https://gradients.shecodes.io/gradients/76 */
-  background: linear-gradient(
-    114.2deg,
-    rgb(121, 194, 243) 22.6%,
-    rgb(255, 180, 239) 67.7%
-  );
+  /*This color gradient was created using the open-source code snippet provided by SheCodes at https://gradients.shecodes.io/gradients/417*/
+  background: linear-gradient(89.2deg, #bff1ec 22.3%, #6dc0ec 84.1%);
   margin: 0 auto;
   padding: 35px 0px 65px;
 }
@@ -126,10 +127,12 @@ a.email-link {
 a.hero-button {
   color: var(--secondary-colour);
   background-color: var(--primary-colour);
-  box-shadow: 4px 4px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
+  font-family: monospace;
+  font-size: 16px;
   padding: 15px 18px;
-  margin: 0px 15px;
+  margin: 5px 15px;
   text-decoration: none;
   transition: 200ms all ease-in-out;
 }
@@ -137,22 +140,18 @@ a.hero-button {
 a.hero-button:hover {
   color: var(--primary-colour);
   background-color: var(--secondary-colour);
+  box-shadow: 4px 4px var(--primary-colour);
 }
 
 table {
-  border: 2px solid var(--primary-colour);
   border-collapse: collapse;
-  box-shadow: 8px 8px var(--primary-colour);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   margin: 0 auto;
   margin-top: 40px;
 }
 
 thead {
-  background: linear-gradient(
-    114.2deg,
-    rgb(121, 194, 243) 22.6%,
-    rgb(255, 180, 239) 67.7%
-  );
+  background: linear-gradient(89.2deg, #bff1ec 22.3%, #6dc0ec 84.1%);
 }
 
 th,
@@ -167,13 +166,14 @@ tr:nth-child(even) {
 .main-content {
   margin: 0 auto;
   margin-top: 50px;
-  max-width: 65%;
+  max-width: 75%;
 }
 
 .project-overview,
 .about-overview {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .project-info,
@@ -183,6 +183,19 @@ tr:nth-child(even) {
   text-align: left;
 }
 
-.about-info h3 {
-  margin: 0%;
+.gallery-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+img.gallery-image {
+  display: block;
+  margin: 25px 10px;
+  max-width: 40%;
+  transition: 200ms all ease-in-out;
+}
+
+img.gallery-image:hover {
+  transform: scale(110%);
 }
