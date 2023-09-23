@@ -94,11 +94,14 @@ img.gallery-image {
 img.gallery-image:hover {
   transform: scale(110%);
 }
+
 img.about-headshot-image,
 img.gallery-image {
   max-width: 40%;
 }
-
+img.shecodes-certificate {
+  padding: 0px;
+}
 a.hero-button {
   color: var(--secondary-colour);
   background-color: var(--primary-colour);
