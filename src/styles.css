@@ -4,13 +4,21 @@
   --tertiary-colour: #6dc0ec;
   --quarternary-colour: #bff1ec;
   --quinary-colour: #e9ebed;
+
+  --primary-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  --secondary-font: monospace;
+
+  /*This color gradient was created using the open-source code snippet provided by SheCodes at https://gradients.shecodes.io/gradients/417*/
+  --primary-gradient: linear-gradient(89.2deg, #bff1ec 22.3%, #6dc0ec 84.1%);
+
+  --box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  --transition: all 150ms ease-in-out;
 }
 
 body {
   background-color: var(--secondary-colour);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-weight: 100;
+  font-family: var(--primary-font);
   margin: 0%;
   text-align: center;
 }
@@ -20,29 +28,20 @@ nav.navigation {
   overflow: hidden;
   padding: 0%;
 }
-
-nav.navigation li {
-  float: left;
-  list-style: none;
-  padding: 0%;
-}
-
 nav.navigation a {
-  color: #e6edf3;
+  color: var(--secondary-colour);
   float: left;
   font-weight: 500;
   font-size: 18px;
   padding: 15px 25px;
   text-align: center;
   text-decoration: none;
-  transition: 200ms all ease-in-out;
+  transition: var(--transition);
 }
-
 nav.navigation a:hover {
   color: var(--primary-colour);
   background-color: var(--secondary-colour);
 }
-
 nav.navigation a.active {
   color: var(--tertiary-colour);
 }
@@ -50,17 +49,14 @@ nav.navigation a.active {
 h1 {
   font-size: 65px;
 }
-
 h2 {
-  font-family: monospace;
+  font-family: var(--secondary-font);
   font-weight: 300;
 }
-
 h2,
 h3 {
   font-size: 35px;
 }
-
 h4 {
   font-size: 25px;
 }
@@ -76,107 +72,111 @@ img.gallery-image,
 iframe.embedded-shecodes-video {
   border: solid 1px var(--secondary-colour);
   border-radius: 5px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
   padding: 15px;
 }
-
 img.index-image,
 img.about-headshot-image {
-  transition: all 200ms ease-in-out;
+  transition: var(--transition);
 }
-
 img.index-image {
-  max-width: 350px;
+  max-height: 400px;
+  max-width: 400px;
 }
-
 img.index-image:hover {
   transform: scale(103%);
 }
-
-img.about-headshot-image {
+img.gallery-image {
+  display: block;
+  margin: 25px 10px;
+  transition: var(--transition);
+}
+img.gallery-image:hover {
+  transform: scale(110%);
+}
+img.about-headshot-image,
+img.gallery-image {
   max-width: 40%;
+}
+
+a.hero-button {
+  color: var(--secondary-colour);
+  background-color: var(--primary-colour);
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  padding: 15px 18px;
+  margin: 5px 15px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+a.hero-button:hover {
+  color: var(--primary-colour);
+  background-color: var(--secondary-colour);
+}
+a.table-link {
+  color: var(--tertiary-colour);
+}
+a.email-link {
+  color: var(--tertiary-colour);
+  display: block;
+  font-weight: 700;
+  margin: 15px 0;
 }
 
 footer {
   margin: 50px;
 }
 
-a.email-link {
-  color: var(--primary-colour);
-  display: block;
-  font-weight: 700;
-  margin: 15px 0;
-  text-decoration: none;
-}
-
-.page-hero {
-  /*This color gradient was created using the open-source code snippet provided by SheCodes at https://gradients.shecodes.io/gradients/417*/
-  background: linear-gradient(89.2deg, #bff1ec 22.3%, #6dc0ec 84.1%);
-  margin: 0 auto;
-  padding: 35px 0px 65px;
-}
-
-.page-hero-content {
-  margin: 0 auto;
-  max-width: 65%;
-}
-
-.hero-links {
-  margin-top: 55px;
-}
-
-a.hero-button {
-  color: var(--secondary-colour);
-  background-color: var(--primary-colour);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 8px;
-  font-family: monospace;
-  font-size: 16px;
-  padding: 15px 18px;
-  margin: 5px 15px;
-  text-decoration: none;
-  transition: 200ms all ease-in-out;
-}
-
-a.hero-button:hover {
-  color: var(--primary-colour);
-  background-color: var(--secondary-colour);
-  box-shadow: 4px 4px var(--primary-colour);
-}
-
 table {
   border-collapse: collapse;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow);
   margin: 0 auto;
   margin-top: 40px;
 }
-
 thead {
-  background: linear-gradient(89.2deg, #bff1ec 22.3%, #6dc0ec 84.1%);
+  background: var(--primary-gradient);
 }
-
 th,
 td {
   padding: 15px 50px;
 }
-
-td a {
-  color: var(--tertiary-colour);
-}
-
 tr:nth-child(even) {
   background-color: var(--quinary-colour);
 }
 
+.page-hero,
+.page-hero-content,
 .main-content {
   margin: 0 auto;
+}
+
+.page-hero {
+  background: var(--primary-gradient);
+
+  padding: 35px 0px 65px;
+}
+.page-hero-content {
+  max-width: 65%;
+}
+.hero-links {
+  margin-top: 55px;
+}
+
+.main-content {
   margin-top: 50px;
   max-width: 75%;
 }
 
 .project-overview,
-.about-overview {
+.about-overview,
+.gallery-view {
   display: flex;
+}
+
+.project-overview,
+.about-overview {
   justify-content: space-between;
   margin-bottom: 50px;
 }
@@ -184,23 +184,11 @@ tr:nth-child(even) {
 .project-info,
 .about-info {
   margin: 0;
-  margin-left: 40px;
+  margin-left: 60px;
   text-align: left;
 }
 
 .gallery-view {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-img.gallery-image {
-  display: block;
-  margin: 25px 10px;
-  max-width: 40%;
-  transition: 200ms all ease-in-out;
-}
-
-img.gallery-image:hover {
-  transform: scale(110%);
 }
