@@ -2,7 +2,8 @@
   --primary-colour: #21262e;
   --secondary-colour: #e6edf3;
   --tertiary-colour: #ffb4ef;
-  --quarternary-color: #79c2f3;
+  --quarternary-colour: #79c2f3;
+  --quinary-colour: #e9ebed;
 }
 
 body {
@@ -136,6 +137,31 @@ a.hero-button {
 a.hero-button:hover {
   color: var(--primary-colour);
   background-color: var(--secondary-colour);
+}
+
+table {
+  border: 2px solid var(--primary-colour);
+  border-collapse: collapse;
+  box-shadow: 8px 8px var(--primary-colour);
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+thead {
+  background: linear-gradient(
+    114.2deg,
+    rgb(121, 194, 243) 22.6%,
+    rgb(255, 180, 239) 67.7%
+  );
+}
+
+th,
+td {
+  padding: 15px 50px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--quinary-colour);
 }
 
 .main-content {
