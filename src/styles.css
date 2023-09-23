@@ -1,11 +1,27 @@
+:root {
+  --primary-colour: #21262e;
+  --secondary-colour: #e6edf3;
+  --tertiary-colour: #ffb4ef;
+  --quarternary-color: #79c2f3;
+  --gradient-colour: radial-gradient(
+    328px at 2.9% 15%,
+    rgb(191, 224, 251) 0%,
+    rgb(232, 233, 251) 25.8%,
+    rgb(252, 239, 250) 50.8%,
+    rgb(234, 251, 251) 77.6%,
+    rgb(240, 251, 244) 100.7%
+  );
+}
+
 body {
+  background-color: var(--secondary-color);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0%;
   text-align: center;
 }
 
 nav.navigation {
-  background-color: #21262e;
+  background-color: var(--primary-colour);
   overflow: hidden;
   padding: 0%;
 }
@@ -31,8 +47,7 @@ nav.navigation a:hover {
 }
 
 nav.navigation a.active {
-  background-color: #e6edf3;
-  color: #21262e;
+  color: var(--tertiary-colour);
 }
 
 h1 {
@@ -41,12 +56,15 @@ h1 {
 }
 
 h2 {
-  color: #54575c;
   font-size: 35px;
 }
 
-.main-content {
+.page-hero {
+  background: linear-gradient(
+    114.2deg,
+    rgb(121, 194, 243) 22.6%,
+    rgb(255, 180, 239) 67.7%
+  );
   margin: 0 auto;
-  margin-top: 65px;
-  max-width: 60%;
+  padding: 65px 0px 85px;
 }
