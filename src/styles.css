@@ -195,3 +195,20 @@ tr:nth-child(even) {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.contact-container {
+  background: var(--primary-gradient);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 60%;
+  text-align: left;
+}
+.contact-container h4 {
+  margin: 0;
+  position: relative;
+  top: 15px;
+}
