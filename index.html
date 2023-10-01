@@ -10,11 +10,14 @@
     <header>
       <!--This Nav element was created with reference to the instructions and techniques provided by w3schools at https://www.w3schools.com/howto/howto_js_topnav.asp-->
       <nav class="navigation">
-        <a href="#" class="active">Sadhbh Redmond</a>
-        <a href="about.html">About</a>
-        <a href="further-info.html">MSc</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <span>Sadhbh Redmond</span>
+        <div class="navigation-links">
+          <a href="#" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="further-info.html">MSc</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </div>
       </nav>
     </header>
     <div class="page-hero">
@@ -35,6 +38,7 @@
     </div>
     <main class="main-content">
       <h3>This Project</h3>
+      <hr />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
         voluptatibus blanditiis voluptatem odit quidem minima commodi
@@ -53,8 +57,10 @@
           class="index-image"
         />
         <section class="project-info">
-          <h4>Module: (COMP30680) Web-App Development</h4>
-          <h4>Assignment 1: HTML5 & CSS3</h4>
+          <h3 class="project-module">
+            Module: (COMP30680) Web-App Development
+          </h3>
+          <h4 class="project-assignment">Assignment 1: HTML5 & CSS3</h4>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
             omnis alias dolores repellat tempora molestiae nesciunt sequi id
@@ -80,6 +86,12 @@
             any copyright or propriety infringements.</small
           >
         </section>
+      </div>
+      <div class="contact-container">
+        <h4>Have questions? Feel to reach out.</h4>
+        <a href="mailto:sadhbh.redmond@ucdconnect.ie" class="hero-button"
+          >Email Me</a
+        >
       </div>
     </main>
     <footer>

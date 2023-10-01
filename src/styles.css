@@ -1,16 +1,21 @@
 :root {
   --primary-colour: #21262e;
-  --secondary-colour: #f7f8f8;
-  --tertiary-colour: #6dc0ec;
-  --quarternary-colour: #bff1ec;
+  --secondary-colour: #f7f8f8 /*#f7f8f8*/;
+  --tertiary-colour: #b1b0b3;
+  --quarternary-colour: #e74bb8;
   --quinary-colour: #e9ebed;
 
   --primary-font: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  --secondary-font: monospace;
+  --secondary-font: "Courier New", Courier, monospace;
 
-  /*This color gradient was created using the open-source code snippet provided by SheCodes at https://gradients.shecodes.io/gradients/417*/
-  --primary-gradient: linear-gradient(89.2deg, #bff1ec 22.3%, #6dc0ec 84.1%);
+  /*https://gradients.shecodes.io/gradients/95*/
+  --primary-gradient: linear-gradient(
+    91.1deg,
+    #391f69 -2.3%,
+    #732b9b 44.4%,
+    #e74bb8 103.4%
+  );
 
   --box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   --transition: all 150ms ease-in-out;
@@ -28,22 +33,30 @@ nav.navigation {
   overflow: hidden;
   padding: 0%;
 }
-nav.navigation a {
-  color: var(--secondary-colour);
+nav.navigation a,
+nav.navigation span {
+  color: var(--tertiary-colour);
   float: left;
   font-weight: 500;
-  font-size: 18px;
-  padding: 15px 25px;
+  font-size: 17px;
+  padding: 17px 15px;
   text-align: center;
   text-decoration: none;
   transition: var(--transition);
 }
-nav.navigation a:hover {
-  color: var(--primary-colour);
-  background-color: var(--secondary-colour);
+nav.navigation a:hover,
+nav.navigation a.active:hover {
+  color: var(--secondary-colour);
+  background-color: var(--primary-colour);
 }
 nav.navigation a.active {
-  color: var(--tertiary-colour);
+  background-color: var(--primary-colour);
+  color: var(--secondary-colour);
+}
+nav.navigation span {
+  background-color: var(--primary-colour);
+  color: var(--quarternary-colour);
+  font-weight: 900;
 }
 
 h1 {
@@ -57,13 +70,26 @@ h2,
 h3 {
   font-size: 35px;
 }
+h3.project-module {
+  color: var(--quarternary-colour);
+}
+h3.tech-info-heading {
+  margin-top: 65px;
+}
 h4 {
   font-size: 25px;
+}
+h4.project-assignment {
+  font-family: var(--secondary-font);
+  font-weight: 100;
 }
 
 p,
 li {
   font-size: 18px;
+}
+small {
+  color: var(--tertiary-colour);
 }
 
 img.index-image,
@@ -82,9 +108,8 @@ img.about-headshot-image {
 img.index-image {
   max-height: 400px;
   max-width: 400px;
-}
-img.index-image:hover {
-  transform: scale(103%);
+  position: relative;
+  top: 36px;
 }
 img.gallery-image {
   display: block;
@@ -94,22 +119,35 @@ img.gallery-image {
 img.gallery-image:hover {
   transform: scale(110%);
 }
+img.about-headshot-image {
+  max-height: 450px;
+  position: relative;
+  top: 40px;
+  transition: transform 2s;
+}
+img.about-headshot-image:hover,
+img.index-image:hover {
+  transform: rotate(-1080deg) scale(108%);
+}
 
-img.about-headshot-image,
 img.gallery-image {
   max-width: 40%;
 }
 img.shecodes-certificate {
   padding: 0px;
 }
+iframe {
+  margin: 30px 0;
+}
+
 a.hero-button {
   color: var(--secondary-colour);
   background-color: var(--primary-colour);
   box-shadow: var(--box-shadow);
   border-radius: 8px;
-  font-family: var(--secondary-font);
   font-size: 16px;
-  padding: 15px 18px;
+  font-weight: 700;
+  padding: 20px 25px;
   margin: 5px 15px;
   text-decoration: none;
   transition: var(--transition);
@@ -119,11 +157,12 @@ a.hero-button:hover {
   background-color: var(--secondary-colour);
 }
 a.table-link {
-  color: var(--tertiary-colour);
+  color: var(--quarternary-colour);
 }
 a.email-link {
-  color: var(--tertiary-colour);
+  color: var(--quarternary-colour);
   display: block;
+  font-size: 18px;
   font-weight: 700;
   margin: 15px 0;
 }
@@ -137,8 +176,13 @@ table {
   box-shadow: var(--box-shadow);
   margin: 0 auto;
   margin-top: 40px;
+  transition: transform 250ms;
+}
+table:hover {
+  transform: scale(110%);
 }
 thead {
+  color: var(--secondary-colour);
   background: var(--primary-gradient);
 }
 th,
@@ -149,6 +193,10 @@ tr:nth-child(even) {
   background-color: var(--quinary-colour);
 }
 
+hr {
+  margin-bottom: 35px;
+}
+
 .page-hero,
 .page-hero-content,
 .main-content {
@@ -157,11 +205,11 @@ tr:nth-child(even) {
 
 .page-hero {
   background: var(--primary-gradient);
-
   padding: 35px 0px 65px;
 }
-.page-hero-content {
-  max-width: 65%;
+div.page-hero-content {
+  color: var(--secondary-colour);
+  max-width: 60%;
 }
 .hero-links {
   margin-top: 55px;
@@ -203,11 +251,13 @@ tr:nth-child(even) {
   justify-content: space-between;
   padding: 30px 60px;
   margin: 0 auto;
-  margin-top: 50px;
-  max-width: 60%;
+  margin-top: 75px;
+  max-width: 75%;
   text-align: left;
 }
 .contact-container h4 {
+  color: #f7f8f8;
+  font-weight: 400;
   margin: 0;
   position: relative;
   top: 15px;
