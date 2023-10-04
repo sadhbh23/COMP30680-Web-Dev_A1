@@ -123,7 +123,7 @@ img.about-headshot-image {
   max-height: 450px;
   position: relative;
   top: 40px;
-  transition: transform 2s;
+  transition: transform 400ms;
 }
 img.about-headshot-image:hover,
 img.index-image:hover {
@@ -185,7 +185,7 @@ thead {
   color: var(--secondary-colour);
   background: var(--primary-gradient);
 }
-th.table-heading,
+th,
 td {
   padding: 15px 50px;
 }
@@ -293,7 +293,7 @@ div.page-hero-content {
     margin-top: 10px;
   }
 
-  /* Force table to not be like tables anymore */
+  /*The code below was written with reference to https://css-tricks.com/responsive-data-tables/*/
   table,
   thead,
   tbody,
@@ -302,8 +302,6 @@ div.page-hero-content {
   tr {
     display: block;
   }
-
-  /* Hide table headers (but not display: none;, for accessibility) */
 
   thead tr {
     display: none;
@@ -317,13 +315,14 @@ div.page-hero-content {
     position: relative;
     padding-left: 50%;
   }
+
   td:before {
     position: absolute;
-    top: 16px;
     left: 6px;
-    width: 45%;
+    top: 16px;
     padding-right: 10px;
     white-space: nowrap;
+    width: 45%;
   }
 
   td.msc-table:nth-of-type(1):before {
