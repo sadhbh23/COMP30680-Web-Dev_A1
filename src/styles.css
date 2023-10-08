@@ -1,6 +1,6 @@
 :root {
   --primary-colour: #21262e;
-  --secondary-colour: #f7f8f8 /*#f7f8f8*/;
+  --secondary-colour: #f7f8f8;
   --tertiary-colour: #b1b0b3;
   --quarternary-colour: #e74bb8;
   --quinary-colour: #e9ebed;
@@ -9,7 +9,8 @@
     "Lucida Sans", Arial, sans-serif;
   --secondary-font: "Courier New", Courier, monospace;
 
-  /*https://gradients.shecodes.io/gradients/95*/
+  /*This Gradient property was created with reference to the instructions and techniques provided by SheCodes at https://gradients.shecodes.io/gradients/95 */
+  /*Title: CSS Gradient, Author: Unknown, Date: Unknown, Code Version: 3.0, Availability: https://gradients.shecodes.io/gradients/95 */
   --primary-gradient: linear-gradient(
     91.1deg,
     #391f69 -2.3%,
@@ -319,7 +320,8 @@ div.page-hero-content {
     margin-top: 10px;
   }
 
-  /*The code below was written with reference to https://css-tricks.com/responsive-data-tables/*/
+  /*This responsive Table Media Query property was created with reference to the instructions and techniques provided by CSS-Tricks at https://css-tricks.com/responsive-data-tables/ */
+  /*Title: Responsive Data Tables, Author: Chris Coyier, Date: 9th June 2018 (09/06/2018), Code Version: 3.0, Availability: https://css-tricks.com/responsive-data-tables/ */
   table,
   thead,
   tbody,
