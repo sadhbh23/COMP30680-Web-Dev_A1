@@ -140,6 +140,9 @@ iframe {
   margin: 30px 0;
 }
 
+a {
+  color: var(--quarternary-colour);
+}
 a.hero-button {
   color: var(--secondary-colour);
   background-color: var(--primary-colour);
